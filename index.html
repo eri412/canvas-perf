@@ -1,13 +1,24 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
-  </body>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Canvas perf</title>
+        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/src/style.css">
+        <script type="module" src="/src/menu/main.ts" defer></script>
+        <script type="module" src="/src/canvas/main.ts" defer></script>
+    </head>
+    <body>
+        <aside class="menu">
+            <label for="menu-objNum">Количество квадратов</label>
+            <input id="menu-objNum" type="number" value="100" min="0" step="100">
+            <div>
+                <label for="menu-fpsCount">FPS:</label>
+                <samp class="menu-fpsCount" id="menu-fpsCount">0</samp>
+            </div>
+            <button class="menu-hideButton" type="button">&lt;</button>
+        </aside>
+        <canvas class="canvas"></canvas>
+    </body>
 </html>
